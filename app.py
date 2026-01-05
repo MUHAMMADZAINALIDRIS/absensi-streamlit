@@ -15,11 +15,11 @@ from hashlib import sha256
 st.set_page_config(page_title="Sistem Absensi Online", layout="wide")
 
 DB_CONFIG = {
-    "host": st.secrets["DB_HOST"],
-    "dbname": st.secrets["DB_NAME"],
-    "user": st.secrets["DB_USER"],
-    "password": st.secrets["DB_PASSWORD"],
-    "port": st.secrets["DB_PORT"],
+    "host": st.secrets["absensi-paskibra"],
+    "dbname": st.secrets["postgres"],
+    "user": st.secrets["postgres"],
+    "password": st.secrets["AbsensiAp145"],
+    "port": st.secrets["5432"],
 }
 
 # ---------------- DATABASE ----------------
@@ -170,3 +170,4 @@ else:
 # jadwal(id, tanggal, keterangan)
 # absensi(id, user_id, tanggal, status)
 # ================================
+
