@@ -15,7 +15,7 @@ from hashlib import sha256
 st.set_page_config(page_title="Sistem Absensi Online", layout="wide")
 
 DB_CONFIG = {
-    "host": st.secrets["absensi-paskibra"],
+    "host": st.secrets["db.zhcjqimlgqherqhtsbzu.supabase.co"],
     "dbname": st.secrets["postgres"],
     "user": st.secrets["postgres"],
     "password": st.secrets["AbsensiAp145"],
@@ -170,4 +170,5 @@ else:
 # jadwal(id, tanggal, keterangan)
 # absensi(id, user_id, tanggal, status)
 # ================================
+
 
