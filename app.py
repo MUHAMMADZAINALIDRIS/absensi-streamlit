@@ -30,7 +30,8 @@ def get_conn():
         user=DB_CONFIG["user"],
         password=DB_CONFIG["password"],
         port=DB_CONFIG["port"],
-        sslmode="require"
+        sslmode="require",
+        connect_timeout=10
     )
 
 # ---------------- SECURITY ----------------
@@ -170,6 +171,7 @@ else:
 # jadwal(id, tanggal, keterangan)
 # absensi(id, user_id, tanggal, status)
 # ================================
+
 
 
 
