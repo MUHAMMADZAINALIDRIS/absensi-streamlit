@@ -24,7 +24,14 @@ DB_CONFIG = {
 
 # ---------------- DATABASE ----------------
 def get_conn():
-    return psycopg2.connect(**DB_CONFIG)
+    return psycopg2.connect(
+        host=DB_CONFIG["host"],
+        dbname=DB_CONFIG["dbname"],
+        user=DB_CONFIG["user"],
+        password=DB_CONFIG["password"],
+        port=DB_CONFIG["port"],
+        sslmode="require"
+    )
 
 # ---------------- SECURITY ----------------
 def hash_password(password):
